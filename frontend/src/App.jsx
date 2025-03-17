@@ -3,7 +3,7 @@ import axios from 'axios';
 import io from 'socket.io-client';
 import './App.css';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://chatapp-backend-b74z.onrender.com');
 
 function App() {
   const [username, setUsername] = useState('');
@@ -44,7 +44,7 @@ function App() {
 
   const fetchMessages = async (user) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/chat/messages/${username}/${user}`);
+      const response = await axios.get(`https://chatapp-backend-b74z.onrender.com/api/chat/messages/${username}/${user}`);
       setChat(response.data);
     } catch (error) {
       console.error('Error fetching messages:', error);
