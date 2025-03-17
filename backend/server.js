@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://192.168.69.65:5173"],
+    origin: ["https://chatapp-frontend-z7gm.onrender.com/"],
     methods: ["GET", "POST"],
   },
 });
